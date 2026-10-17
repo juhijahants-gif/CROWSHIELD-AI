@@ -1,0 +1,1 @@
+export const timeAgo=()=>new Date().toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short'});

@@ -1,0 +1,13 @@
+export const trendData=[{time:'08:00',count:1250,predicted:1300},{time:'09:00',count:1680,predicted:1750},{time:'10:00',count:2100,predicted:2250},{time:'11:00',count:2480,predicted:2600},{time:'12:00',count:2850,predicted:3000},{time:'13:00',count:2600,predicted:2750},{time:'14:00',count:2320,predicted:2400},{time:'15:00',count:1980,predicted:2050}];
+export const locations=[
+{id:'CS-101',name:'Flinders Street Station',area:'CBD',count:2840,risk:88,status:'Online',updated:'2 min ago',lat:-37.8183,lon:144.9671},
+{id:'CS-102',name:'Federation Square',area:'CBD',count:1920,risk:72,status:'Online',updated:'3 min ago',lat:-37.8179,lon:144.9691},
+{id:'CS-103',name:'Queen Victoria Market',area:'North CBD',count:1340,risk:58,status:'Online',updated:'4 min ago',lat:-37.8076,lon:144.9568},
+{id:'CS-104',name:'Melbourne Central',area:'CBD',count:960,risk:36,status:'Online',updated:'1 min ago',lat:-37.8102,lon:144.9629},
+{id:'CS-105',name:'Southbank Promenade',area:'Southbank',count:870,risk:44,status:'Stale',updated:'38 min ago',lat:-37.8216,lon:144.9647},
+{id:'CS-106',name:'Southern Cross Station',area:'Docklands',count:2210,risk:79,status:'Online',updated:'2 min ago',lat:-37.8183,lon:144.9525}];
+export const initialAlerts=[
+{id:'ALT-2401',level:'Critical',location:'Flinders Street Station',score:88,status:'New',time:'12:42 PM',reason:'Demo density score exceeded critical threshold.',action:'Review pedestrian flow and consider local crowd-management measures.'},
+{id:'ALT-2398',level:'High',location:'Southern Cross Station',score:79,status:'Acknowledged',time:'12:31 PM',reason:'Predicted arrival surge during a transport interchange peak.',action:'Monitor platform exits and review nearby sensor readings.'},
+{id:'ALT-2393',level:'Medium',location:'Federation Square',score:64,status:'Resolved',time:'11:58 AM',reason:'Sustained elevated count in sample data.',action:'Continue routine monitoring.'}];
+export const datasets=[{id:'D1',name:'Historical pedestrian counts',purpose:'Baseline and seasonal patterns',status:'Demo data',rows:12480},{id:'D2',name:'Recent pedestrian counts',purpose:'Recent count snapshots',status:'Not connected',rows:0},{id:'D3',name:'Pedestrian sensor locations',purpose:'Sensor inventory and coverage',status:'Demo data',rows:6},{id:'D4',name:'Open-Meteo weather observations',purpose:'Weather context',status:'Not connected',rows:0},{id:'D5',name:'City event permit data',purpose:'Event context',status:'Not connected',rows:0},{id:'D6',name:'Bus stop locations',purpose:'Transport context',status:'Not connected',rows:0}];

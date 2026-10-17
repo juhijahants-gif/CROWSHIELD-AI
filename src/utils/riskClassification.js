@@ -1,0 +1,1 @@
+export function classifyRisk(score){if(score>=85)return 'Critical';if(score>=70)return 'High';if(score>=40)return 'Elevated';return 'Normal';}

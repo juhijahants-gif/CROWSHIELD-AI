@@ -1,0 +1,5 @@
+import {Routes,Route,Navigate} from 'react-router-dom';
+import ProtectedRoute from './components/auth/ProtectedRoute';import RoleGuard from './components/auth/RoleGuard';
+import AuthPage from './pages/AuthPages';import Shell from './components/layout/Shell';import Page from './pages/Pages';
+export default function App(){return <Routes><Route path="/login" element={<AuthPage mode="login"/>}/><Route path="/register" element={<AuthPage mode="register"/>}/><Route path="/forgot-password" element={<AuthPage mode="forgot"/>}/><Route path="/reset-password" element={<AuthPage mode="reset"/>}/><Route path="/" element={<Root/>}/>{['dashboard','monitoring','predictions','alerts','sensors','analytics','data-sources','settings','users'].map(p=><Route key={p} path={'/'+p} element={<ProtectedRoute><Shell><RoleGuard minRole={p==='users'||p==='settings'?'Administrator':'Viewer'}><Page page={p}/></RoleGuard></Shell></ProtectedRoute>}/>)}<Route path="*" element={<Navigate to="/" replace/>}/></Routes>}
+function Root(){return <ProtectedRoute><Navigate to="/dashboard" replace/></ProtectedRoute>}
